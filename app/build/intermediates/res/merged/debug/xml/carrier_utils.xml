@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+				  
+    <PreferenceCategory  android:title="Statusbar Custom Text" />
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/carrier_label_entries" android:title="Carrier Label" android:key="status_bar_custom_carrier" android:entryValues="@array/carrier_label_values" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="Carrier Custom Text" android:key="custom_carrier_label" android:dependency="status_bar_custom_carrier" android:summary="Edit carrier label" android:defaultValue="Assaad" android:dialogTitle="Edit Text" />
+    
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Carrier Label Text" android:key="status_bar_carrier_color" android:dependency="status_bar_custom_carrier" android:summary="Choose carrier color" android:defaultValue="-1" alphaSlider="true" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                    android:max="9"
+                    android:dependency="status_bar_custom_carrier"
+					android:title="Carrier Sizing"
+                    android:key="status_bar_carrier_font_size"
+                    android:summary="Adjust Carrier Scalling"
+                    android:defaultValue="12"
+                    min="5"
+                    app:unitsValue=" dp" />
+	
+
+	<PreferenceCategory  android:title="Lockscreen Carrier" />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Hide Lockscreen Carrier Label" android:key="hide_lockcarrier" android:defaultValue="0" android:summaryOn="Lockscreen Carrier Label is Showing" android:summaryOff="Lockscreen Carrier Label is Hidden" />
+    
+	
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Use Custom Carrier Text" android:key="custom_lock_carrier" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" app:isSilent="false" app:packageNameToKill="com.android.systemui"/>
+    <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="Carrier Custom Text" android:key="custom_lock_carrier_text" android:summary="Edit carrier label" android:dependency="custom_lock_carrier" android:defaultValue="Assaad" android:dialogTitle="Edit Text" app:isSilent="false" app:packageNameToKill="com.android.systemui"/>
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Carrier Text" android:key="carrier_color" android:summary="Choose carrier color" android:dependency="custom_lock_carrier" android:defaultValue="-1" alphaSlider="true" app:isSilent="false" app:packageNameToKill="com.android.systemui"/>
+    
+	
+	<PreferenceCategory android:title="Left CPU Speed Status bar " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="CPU Speed Info" android:key="cpu_speed" android:defaultValue="false" android:summaryOn="CPU Speed Showing" android:summaryOff="CPU Speed Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Gov Info" android:key="cpu_gov" android:dependency="cpu_speed" android:defaultValue="0" android:summaryOn="CPU Governor Showing" android:summaryOff="CPU Governor Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="CPU Info Color" android:key="cpu_speed_color" android:dependency="cpu_speed" android:summary="Color of statusbar CPU Info" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+
+	
+	<PreferenceCategory android:title="Right CPU Speed Status bar " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="CPU Speed Info" android:key="eragon_cpu_speed" android:defaultValue="false" android:summaryOn="CPU Speed Showing" android:summaryOff="CPU Speed Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Gov Info" android:key="eragon_cpu_gov" android:dependency="eragon_cpu_speed" android:defaultValue="0" android:summaryOn="CPU Governor Showing" android:summaryOff="CPU Governor Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="CPU Info Color" android:key="eragon_cpu_speed_color" android:dependency="eragon_cpu_speed" android:summary="Color of statusbar CPU Info" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+
+	
+	
+</PreferenceScreen>

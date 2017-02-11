@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    
+	<string-array name="device_info_titles">
+        <item>Device model</item>
+        <item>Android version</item>
+        <item>Build version</item>
+        <item>Battery level</item>
+        <item>Network name</item>
+        <item>WIFI info</item>
+        <item>Next alarm</item>
+        <item>Device up time</item>
+    </string-array>
+
+    <string-array name="device_info_summaries">
+        <item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+		<item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+		<item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+    </string-array>
+
+    <string-array name="device_info_keys">
+        <item>device_model</item>
+        <item>device_android_version</item>
+        <item>device_build_version</item>
+        <item>device_battery_level</item>
+        <item>device_network_name</item>
+        <item>device_wifi_info</item>
+        <item>device_next_alarm</item>
+        <item>device_up_time</item>
+    </string-array>
+
+    <integer-array name="device_info_defaults">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+	
+
+
+	
+	
+	
+    
+	<string-array name="status_virtual_titles">
+        <item>left Task</item>
+        <item>left Home</item>
+        <item>Left Lock</item>
+        <item>Center lock</item>
+        <item>Center Task</item>
+        <item>Center Home</item>
+        <item>Right home</item>
+        <item>Right Recent</item>
+        <item>Right lock</item>
+    </string-array>
+
+    <string-array name="status_virtual_summaries">
+        <item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+		<item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+		<item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+        <item>Enabled or Disabled</item>
+    </string-array>
+
+    <string-array name="status_virtual_keys">
+        <item>cocoyaya_leftcornertask</item>
+        <item>cocoyaya_leftcornerhome</item>
+        <item>cocoyaya_leftcornerlock</item>
+        <item>cocoyaya_centercornerlock</item>
+        <item>cocoyaya_centertask</item>
+        <item>cocoyaya_centerhome</item>
+        <item>cocoyaya_rightcornerhome</item>
+        <item>cocoyaya_rightcornertask</item>
+        <item>cocoyaya_rightcornerlock</item>
+    </string-array>
+
+    <integer-array name="status_virtual_defaults">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </integer-array>
+	
+	
+	
+
+</resources>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <PreferenceCategory android:title="Lockscreen Clock/Date Colorized " />
+    
+	<PreferenceScreen android:title="Lockscreen Elements">
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+        android:defaultValue="true"
+        android:key="lock_clock"
+        android:summaryOff="Hide"
+        android:summaryOn="Show"
+        android:title="Clock and date  on lock screen"
+        app:isSilent="false"
+        app:packageNameToKill="com.android.systemui"/>
+
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show seconds in hours" android:key="lock_seconds" android:defaultValue="0" android:summaryOn="Show" android:summaryOff="Hide" />
+    
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show Mins " android:defaultValue="false" android:key="lock_min" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show Hours " android:defaultValue="false" android:key="lock_hour" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show Date " android:defaultValue="false" android:key="lock_date" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+    
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Date Text" android:key="kg_date_color" android:summary="Choose a color" android:defaultValue="\#ff1d4e78" alphaSlider="false" hexValue="true" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Hours" android:key="kg_clock_hours_color" android:summary="Choose a color" android:defaultValue="\#ff1d4e78" alphaSlider="false" hexValue="true" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Minutes" android:key="kg_clock_minutes_color" android:summary="Choose a color" android:defaultValue="\#ff1d4e78" alphaSlider="false" hexValue="true" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Seconds" android:key="kg_clock_second_color" android:summary="Choose a color" android:defaultValue="\#ff1d4e78" alphaSlider="false" hexValue="true" />
+
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Lockscreen Color Sync" android:key="lockscreen_color_sync_toggle" android:defaultValue="false" android:summaryOn="All Lockscreen Colors are synced" android:summaryOff="Disabled" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lockscreen Sync Color" android:key="lockscreen_color_sync" android:summary="Choose Synced color" android:dependency="lockscreen_color_sync_toggle" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+    
+	</PreferenceScreen>
+	
+	
+	
+	
+	<PreferenceCategory android:title="Lockscreen AmPm Item" />
+            <PreferenceScreen android:title="AmPm Elements ">
+                <PreferenceCategory android:title="Customized it ">
+                   
+	            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show AmPm " android:defaultValue="false" android:key="lock_am_pm_view" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+     
+	            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized AmPm" android:key="kg_ampm_color"  android:dependency="lock_am_pm_view" android:summary="Choose a color" android:defaultValue="\#ff1d4e78" alphaSlider="false" hexValue="true" />
+
+	            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Scaling AmPm" android:key="ampm_scale" android:summary="Adjust AmPm sizing" android:dependency="lock_am_pm_view" android:defaultValue="50" app:minValue="10" app:maxValue="150" app:unitsValue=" dp" />
+	
+				
+				</PreferenceCategory>
+            </PreferenceScreen>
+	
+	
+	
+	
+	
+	
+	
+	
+	<PreferenceCategory android:title="Lockscreen Owners Info Text Color " />
+            <PreferenceScreen android:title="Owner Info Color ">
+                <PreferenceCategory android:title="Set Color" android:summary="Clock display and alignment">
+                    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lockscreen Owner Info " android:key="lockscreen_owner_text_color" android:summary="" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+                </PreferenceCategory>
+            </PreferenceScreen>
+	
+	<PreferenceCategory android:title=" Lockscreen Scaling Clock Elements " />
+    <PreferenceScreen android:title="Scaling Lockscreen Elements">
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Clock Scaling On/Off Toggle" android:key="scaling_toggle" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Scaling Hrs" android:key="hrs_scale" android:summary="Adjust Hrs size" android:dependency="scaling_toggle" android:defaultValue="300" app:minValue="150" app:maxValue="400" app:unitsValue=" dp" />
+        
+		<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Scaling Mins" android:key="mins_scale" android:summary="Adjust Mins size" android:dependency="scaling_toggle" android:defaultValue="300" app:minValue="150" app:maxValue="400" app:unitsValue=" dp" />
+        
+		<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Clock Scaling Seconds" android:key="seconds_clock_scale" android:summary="Adjust Seconds size" android:dependency="scaling_toggle" android:defaultValue="170" app:minValue="100" app:maxValue="325" app:unitsValue=" dp" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Clock Scaling Date" android:key="date_clock_scale" android:summary="Adjust Date size" android:dependency="scaling_toggle" android:defaultValue="70" app:minValue="50" app:maxValue="150" app:unitsValue=" dp" />
+	
+	
+	</PreferenceScreen>
+	
+	
+	
+    <PreferenceCategory android:title="Lockscreen Font Style" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Custom Font Style" android:key="use_lockscreen_clock_font_style" android:defaultValue="false" android:summaryOn="Custom font enabled" android:summaryOff="Disabled" />
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/lockscreen_font_style_entries" android:title="Lockscreen Clock Font Style" android:key="lockscreen_clock_font_style" android:dependency="use_lockscreen_clock_font_style" android:entryValues="@array/lockscreen_font_style_values" />
+
+
+
+
+	<PreferenceCategory android:title=" Notifications Shown on Lockscreen " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/lockscreen_notif_entries" android:title="Notifications Shown on Lockscreen" android:key="lockscreen_notifications" android:summary="Number shown on lockscreen" android:defaultValue="5" android:entryValues="@array/lockscreen_notif_values" />
+    
+	
+	<PreferenceCategory android:title=" Lockscreen Rotation " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Lockscreen Rotation" android:key="lockscreen_rotate" android:summaryOn="Lockscreen rotation enabled" android:summaryOff="Lockscreen rotation disabled" app:isSilent="false" app:packageNameToKill="com.android.systemui" />
+	
+
+	
+	<PreferenceCategory android:title=" Lockscreen Dispaly TimeOut " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MyListPreference
+        android:entries="@array/display_timeout_entries"
+        android:title="Lockscreen Display Timeout"
+        android:key="display_timeout_delay"
+        android:defaultValue="10000"
+        android:entryValues="@array/display_timeout_values"
+        app:packageNameToKill="com.android.systemui"/>
+	
+	
+	<PreferenceCategory android:title=" Lockscreen Pin Pad Colorized " />
+	<PreferenceScreen android:title="Lockscreen Pin Pad Colors" android:summary="Set colors">
+        <PreferenceCategory android:title="PIN Pad Colors" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Pinpad Theme Color Override" android:key="theme_override_pinpad" android:defaultValue="true" android:summaryOn=" Enabled" android:summaryOff=" Disabled" app:isSilent="false" app:packageNameToKill="com.android.systemui"/>
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Numeric Digits" android:key="keypad_digit_color" android:summary="Set digit color" android:defaultValue="-1" hexValue="true" alphaSlider="true" app:isSilent="false" app:packageNameToKill="com.android.systemui"/>
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Letters" android:key="keypad_letter_color" android:summary="Set letter color" android:defaultValue="-1" hexValue="true" alphaSlider="true" app:isSilent="false" app:packageNameToKill="com.android.systemui"/>
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="OK Button" android:key="keypad_ok_color" android:summary="Set color" android:defaultValue="-1" hexValue="true" alphaSlider="true" app:isSilent="false" app:packageNameToKill="com.android.systemui"/>
+    </PreferenceScreen>
+	
+	
+
+	
+	<PreferenceCategory android:title="Weather Elements " />
+    <PreferenceScreen android:title="Colorized Weather">
+        
+		
+		<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Weather On Lockscreen" android:key="weather_kg_enable" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Weather Sunrise Text On Lockscreen" android:key="weather_sunrise_enable" android:dependency="weather_kg_enable" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Weather Sunrise Color" android:key="color_sunrise" android:summary="Choose Weather Sunrise Color" android:dependency="weather_kg_enable" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Weather Sunset Text Lockscreen" android:key="weather_sunset_enable" android:dependency="weather_kg_enable" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Weather Sunset Color" android:key="color_sunset" android:summary="Choose Weather Sunset Color" android:dependency="weather_kg_enable" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Weather Description Text On Lockscreen" android:key="weather_text_enable" android:dependency="weather_kg_enable" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Weather Description Text Color" android:key="color_text" android:summary="Choose Weather Description Text Color" android:dependency="weather_kg_enable" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Weather Location On Lockscreen" android:key="weather_location_enable" android:dependency="weather_kg_enable" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Weather Location Color" android:key="color_location" android:summary="Choose Weather Location Color" android:dependency="weather_kg_enable" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Weather Current Temp Color" android:key="color_temp" android:summary="Choose Weather Current Temp Color" android:dependency="weather_kg_enable" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Weather High Temp Color" android:key="color_high_temp" android:summary="Choose Weather High Temp Color" android:dependency="weather_kg_enable" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Weather Low Temp Color" android:key="color_low_temp" android:summary="Choose Weather Low Temp Color" android:dependency="weather_kg_enable" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+    
+	    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Restore Stock Lockscreen Weather Colors" android:summary="Up to 60s to restore" app:packageNameToKill="com.android.systemui" android:dependency="weather_kg_enable" app:scriptFileName="lockweathercolorrestore.sh" />
+           
+
+
+    
+	<PreferenceCategory android:title="  Barometer Elements " />	
+	
+		<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Barometric Pressure View" android:key="sview_pressure_enable" android:dependency="weather_kg_enable" android:defaultValue="true" android:summaryOn="Shown" android:summaryOff="Hidden" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Pressure Icon" android:key="sview_pressure_icon_visible"  android:dependency="sview_pressure_enable" android:defaultValue="true" android:summaryOn="Shown" android:summaryOff="Hidden" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Pressure Scale Text" android:key="sview_pressure_scale_visible" android:dependency="sview_pressure_enable" android:defaultValue="true" android:summaryOn="Shown" android:summaryOff="Hidden" />
+            
+		
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Set Color Barometer Text" android:key="color_barometr" android:dependency="sview_pressure_enable" android:summary="choose color" android:defaultValue="\#ffffffff" alphaSlider="false" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</PreferenceScreen>
+	
+
+
+
+	<PreferenceCategory android:title="Shealth Pedometer " />
+	 
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Pedometer " android:defaultValue="false" android:key="pedo" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+    
+
+	<PreferenceCategory android:title="Hello Effects " />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Lockscreen Hello Effects  " android:key="show_hello" android:defaultValue="true" android:summaryOn="Enabled  \n> this is an interesting Lockscreen Hello Effects like Good Morning/Afternoon/Night ETC  ,, " android:summaryOff="Disabled  \n> this is an interesting Lockscreen Hello Effects like Good Morning/Afternoon/Night ETC  ,,  " />
+	
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lockscreen Hello  Text Color" android:key="lock_screen_hello_color" android:summary="Choose alarm color" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+    	
+	
+	<PreferenceCategory android:title="Next Alarm " />
+    <PreferenceScreen android:title="Next Alarm">
+	
+	
+	
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Display Next Alarm" android:key="next_alarm" android:defaultValue="true" android:summaryOn="Shown" android:summaryOff="Hidden" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Next Alarm Text Color" android:key="next_alarm_color" android:summary="Choose alarm color" android:defaultValue="-1" hexValue="true" alphaSlider="true" app:isSilent="false" app:packageNameToKill="com.android.systemui" />
+    
+	
+	    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="New  Next Alarm" android:key="alarm_delta_new" android:defaultValue="0" android:summaryOn="Shown" android:summaryOff="Hidden" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title=" New Next Alarm Text Color" android:key="kg_alarm_delta_color" android:summary="Choose alarm color" android:defaultValue="-1" hexValue="true" alphaSlider="true" app:isSilent="false" app:packageNameToKill="com.android.systemui" />
+    
+	
+	
+	
+	</PreferenceScreen>
+	
+	
+	<PreferenceCategory android:title=" Charging Dialog item " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Charging Dialog " android:key="keyguard_charging_notif" android:defaultValue="true" android:summaryOn="Dialog shown  > Unlock attempts and Chargning Text are shown   " android:summaryOff="Dialog hidden   >   Unlock attempts and Chargning Text are shown " app:packageNameToKill="com.android.systemui" />
+     
+
+    <PreferenceCategory android:title=" Lockscreen Pin/Pass  " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Unlock Fp Without Typing Pin/Pass" android:key="fP_unlock" android:summaryOn="Enabled " android:summaryOff="Disabled" app:packageNameToKill="com.android.systemui" />
+    
+
+	
+	<PreferenceCategory android:title="Lockscreen Qiuck Unlock / PinPad Scramble " />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Quick Unlock" android:key="lockscreen_quick_unlock_control" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Pin Pad Scramble" android:key="lockscreen_scramble_pin_layout" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+    
+    	 
+	
+	<PreferenceCategory android:title="Analog Clock Lockscreen"> 
+    </PreferenceCategory> 
+    <PreferenceScreen android:title="Set Digital clock"> 
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference 
+        android:defaultValue="true" 
+        android:key="hide_digital_clock" 
+        android:summaryOff="Digital clock is hidden" 
+        android:summaryOn="Digital clock is showed" 
+        android:title="Hide or show Digital clock" 
+        app:packageNameToKill="com.android.systemui"/> 
+ 
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference 
+            android:defaultValue="false" 
+            android:key="show_analog_clock2" 
+        android:summaryOff="Analog clock is hidden" 
+        android:summaryOn="Analog clock is showed" 
+        android:title="Hide or show analog clock" 
+        app:packageNameToKill="com.android.systemui"/> 
+ 
+    </PreferenceScreen>
+	
+	<PreferenceScreen android:title="Set Analog Clock On Lockscreen"> 
+	
+	
+	    
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="2nd Analog Clock On Lockscreen " android:key="show_analog_clock" android:defaultValue="false" android:summaryOn="Analog Clock Lockscreen IS enabled > this will enabled the 2nd Clock AS Analog On Ur Lockscreen" android:summaryOff="Analog Clock Lockscreen IS  disabled > this will enabled the 2nd Clock AS Analog On Ur Lockscreen"  />
+	    
+	
+	
+	
+	</PreferenceScreen>
+	
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference  android:title="Lockscreen Calender " android:key="show_calendr_in_lockscreen" android:defaultValue="false" android:summaryOn="Calender On Lockscreen IS enabled" android:summaryOff="Calender On Lockscreen IS  disabled "  />
+
+	
+</PreferenceScreen>

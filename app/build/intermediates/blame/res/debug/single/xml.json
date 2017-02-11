@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\utils_launch.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\utils_launch.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\remap_key.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\remap_key.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\lockscreen.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\lockscreen.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\carrier_utils.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\carrier_utils.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\sound_utils.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\sound_utils.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\noti_panel.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\noti_panel.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\script_utils.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\script_utils.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\addons_utils.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\addons_utils.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\other.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\other.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\phone_utils.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\phone_utils.xml"
+    },
+    {
+        "merged": "C:\\Android Studio\\Eragon v2.1\\app\\build\\intermediates\\res\\merged\\debug\\xml\\eragon_ui.xml",
+        "source": "C:\\Android Studio\\Eragon v2.1\\app\\src\\main\\res\\xml\\eragon_ui.xml"
+    }
+]

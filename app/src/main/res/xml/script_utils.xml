@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+	
+	<PreferenceCategory android:title=" DPI Changes Reboot Required ">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary=""
+            android:title=" 560 DPI"
+            app:rebootOptions="imminent"
+            app:scriptFileName="dpi560.sh" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary=""
+            android:title="640 DPI"
+            app:rebootOptions="imminent"
+            app:scriptFileName="dpi640.sh" />
+	
+
+
+	
+	
+    </PreferenceCategory>    
+	
+	
+	
+	<PreferenceCategory android:title="Fix Viper4Android Profile Path">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Fix Viper4Android Paths" android:summary="" app:scriptFileName="viperprofilefix.sh" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Undo Fix for Viper4Android Paths" android:summary="" app:scriptFileName="viperprofilefixundo.sh" />
+    </PreferenceCategory> 
+	
+	
+	<PreferenceScreen android:title=" Viper4Android Backup / Restore  ">
+
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="backup_v4a.sh"
+        android:summary=""
+        android:title="Backup V4A preferences" />
+
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="restore_v4a.sh"
+        android:summary=""
+        android:title="Restore V4A preferences" />	
+	
+
+    </PreferenceScreen>
+	
+	
+	
+	<PreferenceScreen android:title="Emoji">
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="IOS Emojis" app:scriptFileName="emoji_IOS.sh" app:showConfirmDialog="false" app:rebootOptions="optional" />
+        <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Samsung Emojis" app:scriptFileName="emoji_mm.sh" app:showConfirmDialog="false" app:rebootOptions="optional" />
+    </PreferenceScreen>
+	
+	
+	<PreferenceCategory android:title="Some Usefull sounds SCRIPTS" />
+	
+	
+	
+	<PreferenceScreen android:title="Sound Elements ">
+	
+	
+	<PreferenceCategory android:title="Surrounding Volume ">
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="volume_stock.sh"
+        android:summary=""
+        android:title="Stock Sound , Boosted" />
+
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="volume_max.sh"
+        android:summary=""
+        android:title="Surrounding ur Volume  Boosted" />	
+	
+	</PreferenceCategory>
+	
+	
+	
+	<PreferenceCategory android:title="Screenshot Sound">
+    
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Disable ScreenShot Sounds" android:summary="Disables screenshot sound" app:scriptFileName="disable_screenshot_sound.sh" app:showConfirmDialog="false" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Enable ScreenShot Sounds" android:summary="Enables screenshot sound" app:scriptFileName="enable_screenshot_sound.sh" app:showConfirmDialog="false" />
+     
+	</PreferenceCategory> 
+	
+	
+	<PreferenceCategory android:title="Low Battery">
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Disable Low Battery Sounds" app:scriptFileName="disable_lowbat_sounds.sh" android:summary="Disables low battery sound" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Enable Low Battery Sounds" app:scriptFileName="enable_lowbat_sounds.sh" android:summary="Enables low battery sounds" app:rebootOptions="imminent" />
+	
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="Charging Sound">
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Disable Charging Sounds" app:scriptFileName="disable_charging_sounds.sh" android:summary="Disables all charging sounds" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Enable Charging Sounds" app:scriptFileName="enable_charging_sounds.sh" android:summary="Enables all charging sounds" app:rebootOptions="imminent" />
+	
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="boot Sound">
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Disable Boot Sounds" app:scriptFileName="disable_boot_sounds.sh" android:summary="Disables the boot sounds" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Enable Boot Sounds" app:scriptFileName="enable_boot_sounds.sh" android:summary="Enables the boot sounds" app:rebootOptions="imminent" />
+    
+	
+	
+	
+	
+	</PreferenceCategory>
+	
+	
+	<PreferenceCategory android:title="Awesome Boot Sounds">
+        
+	
+		<PreferenceScreen android:title="booting Sounds">
+            
+	
+	        <PreferenceCategory android:title="Silent" />
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Silent Of Boot Sounds" app:scriptFileName="power_off_silent_sounds.sh" android:summary="Set the boot sounds to Silent" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Silent 0n Boot Sounds" app:scriptFileName="power_on_silent_sounds.sh" android:summary="Disabled the boot sounds silently" app:rebootOptions="imminent" />
+    
+	
+	<PreferenceCategory android:title="IOS" />
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="IOS Of Boot Sounds" app:scriptFileName="power_off_ios_sounds.sh" android:summary="Set the boot sounds to IOS" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="IOS 0n Boot Sounds" app:scriptFileName="power_on_ios_sounds.sh" android:summary="Set the boot sounds to IOS" app:rebootOptions="imminent" />
+    
+	<PreferenceCategory android:title="MacOS" />
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="MacOS Of Boot Sounds" app:scriptFileName="power_off_macos_sounds.sh" android:summary="Set the boot sounds to MacOS" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="MacOS 0n Boot Sounds" app:scriptFileName="power_on_macos_sounds.sh" android:summary="Set the boot sounds to MacOS" app:rebootOptions="imminent" />
+    
+	
+	<PreferenceCategory android:title="Samsung" />
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Samsung Of Boot Sounds" app:scriptFileName="power_off_samsung_sounds.sh" android:summary="Set the boot sounds to Samsung" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Samsung 0n Boot Sounds" app:scriptFileName="power_on_samsung_sounds.sh" android:summary="Set the boot sounds to Samsung" app:rebootOptions="imminent" />
+    
+	
+	<PreferenceCategory android:title="Ubuntu" />
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Ubuntu Of Boot Sounds" app:scriptFileName="power_off_ubuntu_sounds.sh" android:summary="Set the boot sounds to Ubuntu" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Ubuntu 0n Boot Sounds" app:scriptFileName="power_on_ubuntu_sounds.sh" android:summary="Set the boot sounds to Ubuntu" app:rebootOptions="imminent" />
+    
+	
+	<PreferenceCategory android:title="Windows7" />
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Windows7 Of Boot Sounds" app:scriptFileName="power_off_windows7_sounds.sh" android:summary="Set the boot sounds to Windows7" app:rebootOptions="imminent" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Windows7 0n Boot Sounds" app:scriptFileName="power_on_windows7_sounds.sh" android:summary="Set the boot sounds to Windows7" app:rebootOptions="imminent" />
+    
+	</PreferenceScreen>
+	
+	</PreferenceCategory>
+	
+	
+	<PreferenceCategory android:title="Sound Script Settings" /> 
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title=" Disable Volume Sound" app:scriptFileName="disable_volume_sounds.sh" android:summary=" Disable sound when you press the volume button" app:packageNameToKill="com.android.systemui"/>
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title=" Enabled Volume Sound" app:scriptFileName="enable_volume_sounds.sh" android:summary=" Enable sound when you press the volume button " app:packageNameToKill="com.android.systemui"/>
+	
+	
+	
+	</PreferenceScreen>
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Enable Bypass Reboot Pin Request" android:summary="Enables Fingerprint always by skipping the pin request on reboot" app:scriptFileName="ozop_no_pin_reboot_enabled.sh" app:showConfirmDialog="false" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Disable Bypass Reboot Pin Request" android:summary="Revert back to Stock behavior on reboot" app:scriptFileName="ozop_no_pin_reboot_disabled.sh" app:showConfirmDialog="false" />
+    
+	
+	
+     <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Fix permissions" android:summary="Restoring logs need permissions fixed sometimes" app:scriptFileName="fixperms.sh" app:rebootOptions="optional" />
+     	
+		
+	
+	
+	
+	
+	<PreferenceCategory android:title=" Backup / Restore some USEFULL Stuff " >
+    
+	            <PreferenceScreen android:title="  Some Backup/Restore usefull SCRIPTS ">
+
+	
+
+
+    
+				
+	                    <PreferenceScreen android:title="  WiFi">
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="wifibackup.sh"
+        android:summary=""
+        android:title="Backup Wifi configurations" />
+
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="wifirestore1.sh"
+        app:rebootOptions="imminent"
+        android:summary="Auto reboots to apply settings"
+        android:title="Restore Wifi configurations" />
+	
+	</PreferenceScreen>
+	
+	<PreferenceScreen android:title="  SMS / MMS">
+
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="mmssmsbk.sh"
+        android:summary=""
+        android:title="Backup SMS and MMS" />
+		
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="mmssmsrestore.sh"
+        android:summary=""
+        android:title="Restore SMS and MMS" />	
+	
+    </PreferenceScreen>
+	
+	<PreferenceScreen android:title="  Contacts ">	
+		
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="contactbk.sh"
+        android:summary=""
+        android:title="Backup Contacts" />
+			
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="contactrestore.sh"
+        android:summary=""
+        android:title="Restore Contacts" />
+		
+	</PreferenceScreen>
+	
+	<PreferenceScreen android:title="  Call Logs  ">	
+		
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="calllogbk.sh"
+        android:summary=""
+        android:title="Backup Call logs" />	
+		
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+        app:scriptFileName="calllogrestore.sh"
+        android:summary=""
+        android:title="Restore Call logs" />	
+	
+	      </PreferenceScreen>
+	
+	   </PreferenceScreen>
+	
+
+	   
+	   
+	   
+	   
+	   
+    </PreferenceCategory>
+	
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.OpenAppPreference android:title="Caller Flashlight Settings" android:summary="Configure flashlight for Calls &amp; SMS" app:componentName="ru.evg.and.app.flashoncall/ru.evg.and.app.flashoncall.StartActivity" />
+	
+	
+	
+    <PreferenceCategory android:title="MMS Screen Off Receiving Notification for MM">
+       
+	   <com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:title="DO NOT Wake Screen for Incoming Text"
+            app:scriptFileName="mms_screenwake_disable.sh"
+			android:summary="Screen will Stays OFF when receiving a text"  />
+        
+		<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:title="Wake Screen for Incoming Text"
+            app:scriptFileName="mms_screenwake_enable.sh" 
+			android:summary="Screen will Wake when receiving a text" />
+    
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="Battery Calibration">
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="wipe battery stat after full charge" app:scriptFileName="batterycalibration.sh" android:summary="Note: Execute this script after fully charged to 100%" app:rebootOptions="imminent" />
+	
+	</PreferenceCategory>
+	
+	
+
+
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Backup Current GPS Config" android:summary="" app:scriptFileName="gps_config_backup.sh" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Restore Saved GPS Config" android:summary="" app:scriptFileName="gps_config_restore.sh" />
+                  
+
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Backup Permissions on Device" android:summary="" app:scriptFileName="permissionsbackup.sh" />
+    <com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Restore Permissions on Device" android:summary="Auto reboots to apply settings" app:scriptFileName="permissionsrestore.sh" app:rebootOptions="imminent" />
+                    			  
+
+	
+		  
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Reset Device Settings" android:summary="" app:scriptFileName="resetdevicesettings.sh" app:rebootOptions="imminent" />
+            	  
+		  
+		  
+		  
+		  
+	
+    <PreferenceCategory android:title="  Wipe Hangouts  Data/Caches "> 
+
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference android:title="Wipe Hangouts cache - Automatic Reboot" android:summary="Clear Hangouts if not getting notifications" app:scriptFileName="hangouts_reset.sh" app:showConfirmDialog="false" />
+     
+    </PreferenceCategory>
+    
+	
+	<PreferenceCategory android:title="Restore Stock Notification Panel Colors">
+      
+
+      	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="May take 1 min"
+            android:title="Restore Stock Notification Panel Colors"
+            app:scriptFileName="notificationcolorrestore.sh"
+            app:packageNameToKill="com.android.systemui"/>
+   
+   
+
+    </PreferenceCategory>
+	
+	
+	
+	<PreferenceCategory android:title="Browser Homepage" />
+    
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.RunScriptPreference
+            android:summary="Set HomePage default as Google"
+            android:title="Set Google as Home"
+            app:scriptFileName="delete_browser_data.sh"
+            app:packageNameToKill=""/>
+
+		
+
+		
+		
+		
+	<PreferenceCategory android:title="  Every Stock default Colors will be Restored here  " />
+
+    <PreferenceScreen android:title="  Restoration Stock Colors">
+
+
+
+    <PreferenceCategory android:title="Restore Global Item  Colors  ( Everythings ) " />
+
+	
+    	<com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+            android:summary="This action will do a global restore of all colors to Stock"
+            android:title="Stock Global Colors Restore"
+            app:keysList="@array/restore_global_colors_keys"
+            app:packageNameToKill="com.android.systemui"
+            app:titlesList="@array/restore_global_colors_titles"
+            app:valuesList="@array/restore_global_colors_values" />
+        		
+	
+
+    <PreferenceCategory android:title="Restore Pull Down Item Colors " />	
+			
+	<com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+                android:summary="This action will restore Notification Pull Down colors to Stock"
+                android:title="Restore colors to stock values"
+                app:keysList="@array/restore_notification_colors_keys"
+                app:packageNameToKill="com.android.systemui"
+                app:titlesList="@array/restore_notification_colors_keys"
+                app:valuesList="@array/restore_notification_colors_values" />		
+	
+
+
+    <PreferenceCategory android:title="Restore Lockscreen Item Colors " />	
+
+    <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+            android:summary="This action will restore LockScreen Items colors to Stock"
+            android:title="Restore colors to stock values"
+            app:keysList="@array/restore_lockscreen_colors_keys"
+            app:titlesList="@array/restore_lockscreen_colors_titles"
+            app:valuesList="@array/restore_lockscreen_colors_values" />
+
+
+
+			
+	<PreferenceCategory android:title="Restore Weather Item  Colors " />
+
+        
+		<com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+            android:summary="This action will restore Weather Items colors to Stock"
+            android:title="Stock LockScreen Weather Colors"
+            app:keysList="@array/restore_lockweather_colors_keys"
+            app:packageNameToKill="com.android.systemui"
+            app:titlesList="@array/restore_lockweather_colors_titles"
+            app:valuesList="@array/restore_lockweather_colors_values" />
+        
+		
+	<PreferenceCategory android:title="Restore Status bar Item  Colors " />	
+
+
+   	    <com.wubydax.romcontrol.v2.prefs.GlobalRestorePreference
+            android:summary="This action will restore Statusbar colors to Stock"
+            android:title="Stock Statusbar Colors"
+            app:keysList="@array/restore_statusbar_colors_keys"
+            app:packageNameToKill="com.android.systemui"
+            app:titlesList="@array/restore_statusbar_colors_titles"
+            app:valuesList="@array/restore_statusbar_colors_values" />	
+			
+	</PreferenceScreen>		
+			
+			
+	
+
+			
+
+</PreferenceScreen>

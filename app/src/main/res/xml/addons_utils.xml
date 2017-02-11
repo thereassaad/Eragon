@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+  
+				  
+	
+	
+	<PreferenceCategory android:title="Statusbar Icons">
+        <PreferenceScreen android:title="Statusbar Icon Toggles" android:summary="Show or hide icons on the statusbar">
+            <PreferenceCategory android:title="Statusbar Icons" />
+            
+			<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Alarm Icon " android:key="alarm_icon" android:defaultValue="false" android:summaryOn="Alarm icon is shown" android:summaryOff="Alarm icon now hidden" />
+            
+			<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Vibrate/Silent Icon " android:key="volume_icon" android:defaultValue="false" android:summaryOn="Sound icons now shown" android:summaryOff="Sound icons now hidden"  />
+			
+			<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Bluetooth Icon " android:key="bluetooth_icon" android:defaultValue="false" android:summaryOn="Bluetooth Icon is shown" android:summaryOff="Bluetooth Icon is now hidden" />
+            
+			<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="WiFi in/out arrows" android:key="wifi_inout_arrow" android:defaultValue="false" android:summaryOn="Currently Shown" android:summaryOff="Currently Hidden" />	
+			
+	        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Notification Icons " android:key="left_icon_view" android:defaultValue="1" android:summaryOn="Enabled notification on Left of Statusbar" android:summaryOff="Disabled notification on Left of Statusbar" />
+        
+		    
+		  
+		  
+
+		  
+		</PreferenceScreen>
+    </PreferenceCategory>
+
+				
+	<PreferenceCategory android:title="Ambient Display for Screen Off">
+    
+	<PreferenceScreen android:title="Ambient Display Feature  ">
+	
+		<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Ambient Display" android:key="ambient_enabled" android:defaultValue="true" android:summaryOn="Feature enabled" android:summaryOff="Feature disabled " app:packageNameToKill="com.android.systemui" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Ambient Pulse on As a System Notifications" android:key="ambient_pulse_on_notifications" android:summary="Use all system notifications" android:dependency="ambient_enabled" android:defaultValue="true" android:summaryOn="Enabled" android:summaryOff="Disabled" app:packageNameToKill="com.android.systemui" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/ambient_pulse_duration" android:title="Ambient Duration in" android:key="ambient_pulse_duration_in" android:dependency="ambient_enabled" android:defaultValue="3000" android:entryValues="@array/ambient_pulse_duration_values" app:packageNameToKill="com.android.systemui" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/ambient_pulse_delay" android:title="Ambient Delay in" android:key="ambient_pulse_delay_in" android:dependency="ambient_enabled" android:defaultValue="3000" android:entryValues="@array/ambient_pulse_delay_values" app:packageNameToKill="com.android.systemui" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/ambient_pulse_duration_visible" android:title="Ambient Duration visible" android:key="ambient_pulse_duration_visible" android:dependency="ambient_enabled" android:defaultValue="1000" android:entryValues="@array/ambient_pulse_duration_visible_values" app:packageNameToKill="com.android.systemui" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/ambient_pulse_duration_out" android:title="Ambient Duration Out" android:key="ambient_pulse_duration_out" android:dependency="ambient_enabled" android:defaultValue="3000" android:entryValues="@array/ambient_pulse_duration_out_values" app:packageNameToKill="com.android.systemui" />
+	
+	
+	
+	</PreferenceScreen>	
+	    
+	</PreferenceCategory>
+
+	
+	
+	
+	<PreferenceCategory android:title="Statusbar Icons" />
+	
+	<PreferenceScreen android:title="Statusbar Lock Button" android:summary="Lock icon options">
+        
+		<com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/sysbar_lock" android:title="Lock SB Button Icons" android:key="sysbar_lock_button" android:summary="%s" android:defaultValue="0" android:entryValues="@array/sysbar_lock_values" />
+        
+		
+		<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lock Button Color" android:key="sysbar_lock_button_color" android:summary="Color of statusbar lock button" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+    
+	
+	
+	<PreferenceCategory android:title="Pulldown" />
+	
+	    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/sysbar_recent" android:title="Custom Pulldown Button" android:key="third_button" android:summary="%s" android:defaultValue="0" android:entryValues="@array/sysbar_recent_values" />
+    
+	    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Recents Button Icon Color" android:key="recents_color" android:summary="Choose color to apply" android:defaultValue="\#ff325d84" alphaSlider="true" hexValue="true" />
+      	
+	    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lock Button Icon Color" android:key="lock_colors" android:summary="Choose color to apply" android:defaultValue="\#ff325d84" alphaSlider="true" hexValue="true" />
+      	
+	    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Home Button Icon Color" android:key="home_colors" android:summary="Choose color to apply" android:defaultValue="\#ff325d84" alphaSlider="true" hexValue="true" />
+      	
+	
+	 
+	</PreferenceScreen>
+	
+
+
+	<PreferenceCategory android:title="Matrix Animations Features " />
+	
+	<PreferenceScreen android:title="Matrix Elements" android:summary="Matrix Options">
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Matrix Recents Anim " android:key="matrix_anim" android:summaryOn="Enabled " android:summaryOff="Disabled"  />
+	
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Matrix Text Colorized " android:dependency="matrix_anim" android:summary="Choose Matrix Text color" android:key="recents_matrix_anim_text_color" android:defaultValue="\#ff286fdd" alphaSlider="true" />
+    
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Matrix BG Color" android:dependency="matrix_anim" android:summary="Choose Matrix BG color" android:key="recents_matrix_anim_bg_color" android:defaultValue="\#ff000000" alphaSlider="true" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:max="255" android:title="Matrix Text Transparency" android:dependency="matrix_anim" android:key="recents_matrix_anim_text_alpha" android:defaultValue="255" min="5" unitsRight="" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:max="50" android:title="Matrix Text Font Size" android:dependency="matrix_anim" android:key="recents_matrix_anim_font_size" android:defaultValue="40" min="24" unitsRight="" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:max="50" android:title="Matrix Frequency" android:dependency="matrix_anim" android:key="recents_matrix_anim_frequency" android:defaultValue="5" min="1" unitsRight="" />
+	
+	
+	
+	<PreferenceCategory android:title="Matrix Pulldown Animations Features " />
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Matrix Pulldown Anim " android:key="eragon_pd_matrix_view" android:summaryOn="Enabled " android:summaryOff="Disabled"  />
+	
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Matrix Text Colorized " android:dependency="eragon_pd_matrix_view" android:summary="Choose Matrix Text color" android:key="pd_matrix_anim_text_color" android:defaultValue="\#ff286fdd" alphaSlider="true" />
+    
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Matrix BG Color" android:dependency="eragon_pd_matrix_view" android:summary="Choose Matrix BG color" android:key="pd_matrix_anim_bg_color" android:defaultValue="\#ff000000" alphaSlider="true" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:max="255" android:title="Matrix Text Transparency" android:dependency="eragon_pd_matrix_view" android:key="pd_matrix_anim_text_alpha" android:defaultValue="255" min="5" unitsRight="" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:max="50" android:title="Matrix Text Font Size" android:dependency="eragon_pd_matrix_view" android:key="pd_matrix_anim_font_size" android:defaultValue="40" min="24" unitsRight="" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:max="50" android:title="Matrix Frequency" android:dependency="eragon_pd_matrix_view" android:key="pd_matrix_anim_frequency" android:defaultValue="5" min="1" unitsRight="" />
+	
+	
+	
+	
+	
+	
+	
+	
+	</PreferenceScreen>
+	
+				
+    <PreferenceCategory   android:title=" AddOns Mod " />
+    
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Enable IME Notification" android:key="enable_ime_notif" android:defaultValue="false" android:summaryOn="Input method choice active" android:summaryOff="Input method choice hidden" app:showConfirmDialog="false" app:rebootDevice="true"/>
+    
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Make Ongoing Notifications Removable" android:key="ongoing_notifications" android:defaultValue="false" android:summaryOn="Ongoing Notifications are removeable" android:summaryOff="Ongoing Notifications are permanent" app:showConfirmDialog="false" app:rebootDevice="true"/>
+    
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="360 Degree Rotation" android:key="all_rotations" android:summaryOn="360 rotation enabled" android:summaryOff="360 rotation disabled" app:isSilent="false" />
+	
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Power Saving Mode Notifications" android:key="psm_notif" android:defaultValue="true" android:summaryOn="Power Saving Mode notification is enabled" android:summaryOff="Power Saving Mode notification is disabled" />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Gray Statusbar on P.S.M." android:key="psm_notif_color" android:defaultValue="true" android:summaryOn="PSM gray status bar is enabled" android:summaryOff="PSM gray status bar is disabled " />
+		
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Mobile Data Popup" android:key="mobile_data_toggle" android:defaultValue="1" android:summaryOn="Confirmation Popup enabled" android:summaryOff="Confirmation Popup disabled" />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Hide SD Card Notification" android:key="hide_sd_noti" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" app:packageNameToKill="com.android.systemui" app:isSilent="false" />
+        
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference
+            android:title="Ongoing Media Connected P.D Notification"
+            android:key="media_connect_notif"
+            android:defaultValue="true"
+            app:isSilent="false"
+			app:rebootDevice="true"
+            android:summaryOn="Notification is shown"
+            android:summaryOff="Notification is disabled" />
+	
+    <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference
+            android:title="Ongoing Charging P.D Notification"
+            android:key="charging_notif"
+            android:defaultValue="true"
+            android:summaryOn="Notification is shown"
+            android:summaryOff="Notification is disabled" app:isSilent="false" app:packageNameToKill="com.android.systemui" />
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference
+                    android:title="Quickconnect Panel"
+                    android:key="qconnectchecked"
+                    android:defaultValue="true"
+                    android:summaryOn="Panel is shown"
+                    android:summaryOff="Panel is hidden" />
+	
+    <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference
+            android:title="Multi-user Avatar"
+            android:key="multiuser_avatar"
+            android:defaultValue="false"
+            android:summaryOn="Multi-user Avatar shown"
+            android:summaryOff="Multi-user Avatar hidden" />
+	
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference
+            android:defaultValue="true"
+            android:key="unlock_guide_text"
+            android:summaryOff="Hide"
+            android:summaryOn="Show"
+            android:title="Swipe screen... text"/>
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Do not Disturb " android:key="dnd_toggle" android:defaultValue="true" android:summaryOn="Do Not Disturb notifications enabled" android:summaryOff="Do Not Disturb notifications disabled" />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Samsung Email Security" android:key="email_security" android:defaultValue="false" android:summaryOn="Disabled \n> Samsung Email Exchange Security Policy Mod " android:summaryOff="Enabled \n> Samsung Email Exchange Security Policy Mod " app:packageNameToKill="com.samsung.android.email.provider" />
+            
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Screenshot Sound" android:key="eragon_capture_screen_sound" android:summary="Make a sound when taking a Screenshot" android:defaultValue="true" android:summaryOn="Screenshot Sound Enabled" android:summaryOff="Screenshot Sound Disabled" />
+                
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="SIMPLE Statusbar Feature" android:key="simple_status_bar" android:summaryOn="Feature Enabled \n> this will bring to You the SIMPLE STATUS BAR From the newest FWs Out like Note7 " android:summaryOff="Feature Disabled \n> this will bring to You the SIMPLE STATUS BAR From the newest FWs Out like Note7 " />
+    
+	
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Notification blur effect" android:key="enable_blur_notif" android:defaultValue="true" android:summaryOn="Feature enabled      \n> this will Gives You the Notification Pulldown Fake Blur Effects ,, " android:summaryOff="Feature disabled \n> this will Gives You the Notification Pulldown Fake Blur Effects ,, "  />
+        
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Recent Panel blur effect" android:key="recents_blur_view" android:defaultValue="true" android:summaryOn="Feature enabled      \n> this will Gives You the Recents Panel Fake Blur Effects ,, " android:summaryOff="Feature disabled \n> this will Gives You the Recents Panel Fake Blur Effects ,, " />
+    
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="ADJUST Fake Blur RADIUS " android:key="eragon_blur_radius" android:defaultValue="2" app:minValue="1" app:maxValue="25" />
+        
+	
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="ADJUST Fake Blur ALPHA " android:key="eragon_blur_alpha" android:defaultValue="4" app:minValue="1" app:maxValue="20"  />
+        
+	
+	
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Recent Panel Clock / Animated too  " android:key="show_clock_in_recents" android:defaultValue="true" android:summaryOn="Feature enabled      \n> this will Gives You the Recents Panel Clock / Animated too ,, " android:summaryOff="Feature disabled \n> this will Gives You the Recents Panel Clock / Animated too ,, " />
+            
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Recent App Protection" android:defaultValue="false" android:key="modcfg_recent_app_protection" android:summaryOn="Selected apps are protected in Recent Apps" android:summaryOff="No App Protection for Recent Apps" app:packageNameToKill="com.android.systemui" />
+    
+	
+	
+	
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="P.D My Text " android:defaultValue="false" android:key="eragon_text_view" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+    
+
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Music Title Texture" android:defaultValue="false" android:key="eragon_music" android:summaryOn="Enabled \n>  Music Title Texture On Your UI" android:summaryOff="Disabled  \n> Music Title Texture On Your UI" />
+    
+	
+	
+	
+
+	
+
+		
+
+
+
+
+
+
+
+
+	
+			
+	<PreferenceCategory android:title="Customize Recent Panel Background">
+        <PreferenceScreen android:title="Recent Task Panel Background">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Enable custom background" android:key="recent_enable_gear_custom_bg" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+            <PreferenceCategory android:title="General bg preferences" android:dependency="recent_enable_gear_custom_bg">
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_bg_type_entries" android:title="Background type" android:key="recent_gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/custom_bg_type_values" app:dependentValue="0" />
+                <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Background opacity" android:key="recent_gear_bg_opacity" android:defaultValue="255" app:minValue="0" app:maxValue="255" />
+            </PreferenceCategory>
+            <PreferenceCategory android:title="Custom image preferences" android:dependency="recent_enable_gear_custom_bg">
+                <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Bg image" android:key="recent_gear_bg_image_uri" />
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/crop_entries" android:title="Set Image Scaling Type" android:key="recent_gear_bg_crop_type" android:defaultValue="0" android:entryValues="@array/crop_values" />
+            </PreferenceCategory>
+            <PreferenceCategory android:title="Color and gradient preferences" android:dependency="recent_enable_gear_custom_bg">
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Select primary color" android:key="recent_gear_bg_primary_color" android:dependency="recent_gear_custom_bg_type" android:defaultValue="\#00000000" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Secondary Color (for gradient)" android:key="recent_gear_second_gradient_color" android:dependency="recent_gear_custom_bg_type" android:defaultValue="\#00000000" />
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="Gradient orientation" android:key="recent_gear_bg_gradient_orientation" android:dependency="recent_gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/gradient_values" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+
+
+    	
+	   
+
+
+    	 
+	
+	<PreferenceCategory    android:title="SingleSwipe QuickPanel " />
+    
+	    <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Single swipe for Quickpanel" android:key="tweaks_qs_pulldown" android:defaultValue="true" android:summaryOn="Feature is enabled \n>This feature allows you to use single finger swipe on far right of screen to open the entire pulldown panel with a single downward swipe" android:summaryOff="Feature is disabled" />
+    
+	<PreferenceCategory    android:title="Heads Up Controlled " />
+    
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:title="Heads Up Notifications"
+                android:key="heads_up_notifications_enabled"
+                android:defaultValue="true"
+                android:summaryOn="Heads up enabled"
+                android:summaryOff="Heads up disabled" />
+	
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/heads_up_timeout_titles" android:title="Heads up timeOut" android:key="heads_up_timeout" android:dependency="heads_up_notifications_enabled" android:defaultValue="3000" android:positiveButtonText="@null" android:negativeButtonText="@null" android:entryValues="@array/heads_up_timeout_values" />
+  
+  
+  
+  
+	
+    <PreferenceCategory android:title="Loud Volume Warning Toggle" />
+    
+	<PreferenceScreen android:summary="Loud Volume Warning Toggle">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Loud Volume Warning" android:key="volume_warning_toggle" android:defaultValue="0" android:summaryOn="Volume Warning Currently Disabled" android:summaryOff="Volume Warning Currently Enabled" />
+    </PreferenceScreen>
+	
+	
+	
+	
+	
+	<PreferenceCategory    android:title="Remove USB PopUp " />
+    
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Remove USB Connected PopUp" android:key="usb_plugged" android:summaryOn="Enabled" android:summaryOff="Disabled" app:rebootDevice="true"/>
+    
+	
+	
+	<PreferenceCategory    android:title="TorchLight " />
+	
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="ScreenOff Torchlight" android:key="torchlight_enable" android:summaryOn="Enabled\nTurn on the torch light by pressing and holding the volume up key while the screen is off" android:summaryOff="Disabled\nTurn on the torch light by pressing and holding the volume up key while the screen is off  " android:summary="Turn on the torch light by pressing and holding the volume up key while the screen is off" android:defaultValue="0" />
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/torchlight_timeout_entries" android:title="TorchLight Time-Out" android:key="torchlight_timeout" android:dependency="torchlight_enable" android:entryValues="@array/torchlight_timeout_values" />
+    
+
+    <PreferenceCategory   android:title="Data Icon Style " />
+
+    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/data_style_entries" android:title="Data Icon Style" android:key="data_icon_type" android:summary="Data Icon Style" android:defaultValue="0" android:dialogTitle="Data Icon Style" android:positiveButtonText="Save" android:negativeButtonText="Cancel" android:entryValues="@array/data_style_values" app:packageNameToKill="com.android.systemui" />
+   
+	
+	<PreferenceCategory    android:title="Brightness  On/Off  " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Brightness Slider" android:key="notification_panel_brightness_adjustment" android:defaultValue="true" android:summaryOn="Currently Shown" android:summaryOff="Currently Hidden" />
+    
+	
+	
+	
+	<PreferenceCategory   android:title="Immersive Mode " />
+    
+	<com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/immersive_entries" android:title="Immersive Mode (Fullscreen)" android:key="policy_control" android:summary="%s" android:entryValues="@array/immersive_values" />
+
+
+	<PreferenceCategory   android:title="AOD brightness " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="AOD brightness " android:key="eragon_aod_brightness" android:defaultValue="17" app:minValue="0" app:maxValue="100" app:rebootDevice="true" />
+        
+	
+	<PreferenceCategory android:title="Signal Cluster">
+        <PreferenceScreen android:title="Signal Cluster" android:summary="This modification swaps the signal cluster back to an old style 4g type view.">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Signal Cluster View " android:key="modcfg_puresignalcluster" android:defaultValue="true" android:summaryOn="Signal Cluster is now set to legacy view" android:summaryOff="Signal Cluster is now set to (pure) stock view" app:packageNameToKill="com.android.systemui" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+	
+	
+</PreferenceScreen>

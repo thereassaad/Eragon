@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+	<PreferenceCategory	android:title="AutoCall Recording/Delay" />
+	
+	<PreferenceCategory  android:title="AutoCall Recording " />
+	
+    <com.wubydax.romcontrol.v2.prefs.FilePreference android:title="Add Call/Record Button" android:key="modcfg_avcr_button" android:defaultValue="false" android:summaryOn="Record button shown" android:summaryOff="Add call button shown" app:packageNameToKill="com.android.incallui" />
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Incoming auto call record" android:key="auto_call_record_in" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" app:packageNameToKill="com.android.incallui" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Outgoing auto call record" android:key="auto_call_record_out" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" app:packageNameToKill="com.android.incallui" />
+	
+	<PreferenceCategory android:title=" Call Delay Control " />
+	
+	<com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/call_delay_entries" android:title="Call delay" android:key="call_delay" android:summary="%s" android:defaultValue="2500" android:entryValues="@array/call_delay_values" app:isSilent="false" app:packageNameToKill="com.android.incallui" />
+	   
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Increasing Ringtone" android:key="db_inc_volume_disable" android:summaryOn="Increasing ringtone enabled" android:summaryOff="Increasing ringtone disabled" app:packageNameToKill="com.android.server.telecom" />
+	
+	
+	<PreferenceCategory android:title="Remove Last Spoke / Message Item From Call Card " />
+	
+	<PreferenceScreen android:title="Last Spoke / Message">
+	
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Remove Last spoke" android:key="last_spoke" android:summaryOn="Option will not be shown" android:summaryOff="Option is shown" app:isSilent="false" app:packageNameToKill="com.android.incallui" />
+	<com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Remove Last message" android:key="last_message" android:summaryOn="Option will not be shown" android:summaryOff="Option is shown" app:isSilent="false" app:packageNameToKill="com.android.incallui" />
+	
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Last Spoke and Msg Icon Color" android:key="last_spoke_icon_color" android:summary="Choose icon color" android:defaultValue="-5329234" hexValue="true" alphaSlider="true" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Last Spoke and Msg Text Color" android:key="last_spoke_txt_color" android:summary="Choose letter color" android:defaultValue="-328966" hexValue="true" alphaSlider="true" />
+    
+	
+	</PreferenceScreen>
+	
+	<PreferenceCategory  android:title="In-call Color Options" android:summary="Set all your colors here" />
+	
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Caller Name Color" android:key="incall_name_color" android:summary="Choose letter color" android:defaultValue="-65536" hexValue="true" alphaSlider="true" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Phone Number Color" android:key="incall_phonenum_color" android:summary="Choose your color" android:defaultValue="-3407976" hexValue="true" alphaSlider="true" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Main Text Color" android:key="incall_text_color" android:summary="Choose letter color" android:defaultValue="-328966" hexValue="true" alphaSlider="true" />
+    
+		
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Dialpad Digits" android:key="incall_digit_color" android:summary="Select digit color" android:defaultValue="-328966" hexValue="true" alphaSlider="true" />
+    <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Dialpad Letters" android:key="incall_letter_color" android:summary="Choose letter color" android:defaultValue="-5329234" hexValue="true" alphaSlider="true" />
+    
+	 
+	
+	
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title=" Contact Name " android:key="contacts_name_text_color" android:summary="Choose letter color" android:defaultValue="#ff000000" hexValue="true" alphaSlider="true" />
+     
+
+
+    
+	<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Dialer Button bg   " android:key="dialer_background_color" android:summary="Choose letter color" android:defaultValue="#00000000" hexValue="true" alphaSlider="true" />
+    
+	
+	
+	<PreferenceCategory android:title=" Contact  LOG  BG Section Control " />
+	
+    <PreferenceScreen
+        android:title="Custom bg for Contact LOG ">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="enable_log_gear_custom_bg"
+            android:summaryOff="Disabled"
+            android:summaryOn="Enabled"
+            android:title="Enable InCallUI LOG custom background"/>
+
+        <PreferenceCategory
+            android:dependency="enable_log_gear_custom_bg"
+            android:title="General bg preferences">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:entries="@array/custom_bg_type_entries"
+                android:entryValues="@array/custom_bg_type_values"
+                android:key="log_gear_custom_bg_type"
+                android:title="Background type"
+                app:dependentValue="0"/>
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                android:defaultValue="255"
+                android:key="log_gear_bg_opacity"
+                android:title="Background opacity"
+                app:maxValue="255"
+                app:minValue="0"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:dependency="enable_log_gear_custom_bg"
+            android:title="Custom image preferences">
+            <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
+                android:key="log_gear_bg_image_uri"
+                android:title="Select Bg image"/>
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:entries="@array/crop_entries"
+                android:entryValues="@array/crop_values"
+                android:key="log_gear_bg_crop_type"
+                android:title="Set Image Scaling Type"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:dependency="enable_log_gear_custom_bg"
+            android:title="Color and gradient preferences">
+
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="log_gear_custom_bg_type"
+                android:key="log_gear_bg_primary_color"
+                android:title="Select primary color"/>
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="log_gear_custom_bg_type"
+                android:key="log_gear_second_gradient_color"
+                android:title="Secondary Color (for gradient)"/>
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:dependency="log_gear_custom_bg_type"
+                android:entries="@array/gradient_entries"
+                android:entryValues="@array/gradient_values"
+                android:key="log_gear_bg_gradient_orientation"
+                android:title="Gradient orientation"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PreferenceCategory android:title=" InCallUI BG 2nd Section Control " />
+	
+    <PreferenceScreen
+        android:title="Custom bg for IncallUI">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="enable_incall_gear_custom_bg"
+            android:summaryOff="Disabled"
+            android:summaryOn="Enabled"
+            android:title="Enable InCallUI custom background"/>
+
+        <PreferenceCategory
+            android:dependency="enable_incall_gear_custom_bg"
+            android:title="General bg preferences">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:entries="@array/custom_bg_type_entries"
+                android:entryValues="@array/custom_bg_type_values"
+                android:key="incall_gear_custom_bg_type"
+                android:title="Background type"
+                app:dependentValue="0"/>
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                android:defaultValue="255"
+                android:key="incall_gear_bg_opacity"
+                android:title="Background opacity"
+                app:maxValue="255"
+                app:minValue="0"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:dependency="enable_incall_gear_custom_bg"
+            android:title="Custom image preferences">
+            <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
+                android:key="incall_gear_bg_image_uri"
+                android:title="Select Bg image"/>
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:entries="@array/crop_entries"
+                android:entryValues="@array/crop_values"
+                android:key="incall_gear_bg_crop_type"
+                android:title="Set Image Scaling Type"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:dependency="enable_incall_gear_custom_bg"
+            android:title="Color and gradient preferences">
+
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="incall_gear_custom_bg_type"
+                android:key="incall_gear_bg_primary_color"
+                android:title="Select primary color"/>
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="incall_gear_custom_bg_type"
+                android:key="incall_gear_second_gradient_color"
+                android:title="Secondary Color (for gradient)"/>
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:dependency="incall_gear_custom_bg_type"
+                android:entries="@array/gradient_entries"
+                android:entryValues="@array/gradient_values"
+                android:key="incall_gear_bg_gradient_orientation"
+                android:title="Gradient orientation"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+
+	
+	
+	
+	<PreferenceCategory android:title=" InCallUI BG 1st Section Control " />
+	
+	<PreferenceScreen
+        android:title="Custom bg for IncallUI">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+            android:defaultValue="false"
+            android:key="enable_incall1_gear_custom_bg"
+            android:summaryOff="Disabled"
+            android:summaryOn="Enabled"
+            android:title="Enable InCallUI custom background"/>
+
+        <PreferenceCategory
+            android:dependency="enable_incall1_gear_custom_bg"
+            android:title="General bg preferences">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:entries="@array/custom_bg_type_entries"
+                android:entryValues="@array/custom_bg_type_values"
+                android:key="incall1_gear_custom_bg_type"
+                android:title="Background type"
+                app:dependentValue="0"/>
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                android:defaultValue="255"
+                android:key="incall1_gear_bg_opacity"
+                android:title="Background opacity"
+                app:maxValue="255"
+                app:minValue="0"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:dependency="enable_incall1_gear_custom_bg"
+            android:title="Custom image preferences">
+            <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
+                android:key="incall1_gear_bg_image_uri"
+                android:title="Select Bg image"/>
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:entries="@array/crop_entries"
+                android:entryValues="@array/crop_values"
+                android:key="incall1_gear_bg_crop_type"
+                android:title="Set Image Scaling Type"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:dependency="enable_incall1_gear_custom_bg"
+            android:title="Color and gradient preferences">
+
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="incall1_gear_custom_bg_type"
+                android:key="incall1_gear_bg_primary_color"
+                android:title="Select primary color"/>
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="incall1_gear_custom_bg_type"
+                android:key="incall1_gear_second_gradient_color"
+                android:title="Secondary Color (for gradient)"/>
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:dependency="incall1_gear_custom_bg_type"
+                android:entries="@array/gradient_entries"
+                android:entryValues="@array/gradient_values"
+                android:key="incall1_gear_bg_gradient_orientation"
+                android:title="Gradient orientation"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<PreferenceCategory android:title=" Full Screen Dialer " />
+	
+	
+
+        <PreferenceCategory
+            android:title="Main Dialer Backgrounds and Colors" />
+        <PreferenceScreen
+            android:title="Main Dialer Options"
+            android:summary="Set backgrounds or color">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:defaultValue="false"
+                android:key="enable_dialer_custom_bg"
+                android:summaryOff="Disabled"
+                android:summaryOn="Enabled \n> You must also enable custom colors and modify them or the dialpad will not be very visible."
+                android:title="Enable custom background" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:dependency="enable_dialer_custom_bg"
+                android:entries="@array/custom_bg_type_entries"
+                android:entryValues="@array/custom_bg_type_values"
+                android:key="dialer_custom_bg_type"
+                android:title="Background type" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
+                android:dependency="enable_dialer_custom_bg"
+                android:key="dialer_bg"
+                android:title="Select image for Background" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:dependency="enable_dialer_custom_bg"
+                android:entries="@array/crop_entries"
+                android:entryValues="@array/crop_values"
+                android:key="dialer_crop_type"
+                android:title="Set Image Scaling Type" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="enable_dialer_custom_bg"
+                android:key="dialer_bg_primary_color"
+                android:title="Select primary color" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="enable_dialer_custom_bg"
+                android:key="dialer_second_gradient_color"
+                android:title="Secondary Color (for gradient)" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference
+                android:defaultValue="0"
+                android:dependency="enable_dialer_custom_bg"
+                android:entries="@array/gradient_entries"
+                android:entryValues="@array/gradient_values"
+                android:key="dialer_bg_gradient_orientation"
+                android:title="Gradient orientation" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
+                android:defaultValue="255"
+                android:dependency="enable_dialer_custom_bg"
+                android:key="dialer_opacity"
+                app:maxValue="255"
+                android:title="Background Opacity" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <PreferenceCategory
+            android:title="Dialer Colors - disable if Theme conflicts" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
+                android:title="Digit and Letter Colors On/Off Toggle"
+                android:key="dialer_theme_override"
+                android:defaultValue="false"
+                android:summaryOn="Colors enabled"
+                android:summaryOff="Colors disabled" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:title="Dialer Digits"
+                android:key="main_digit_color"
+                android:summary="Set digit color"
+                android:dependency="dialer_theme_override"
+				app:isSilent="false"
+                app:packageNameToKill="com.android.contacts"
+                android:defaultValue="#ff000000"/>
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:title="Dialer Letters"
+                android:key="main_letter_color"
+                android:summary="Choose letter color"
+                android:dependency="dialer_theme_override"
+				app:isSilent="false"
+                app:packageNameToKill="com.android.contacts"
+                android:defaultValue="#ff000000" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:title="Dialer Divider"
+                android:key="main_divider_color"
+                android:summary="Choose divider color"
+                android:dependency="dialer_theme_override"
+                android:defaultValue="#ff000000" app:isSilent="false" app:packageNameToKill="com.android.contacts"  />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
+                android:title="Dialer Digits Pressed"
+                android:key="main_digit_color_pressed"
+                android:summary="Set digit color"
+                android:dependency="dialer_theme_override"
+                android:defaultValue="#ff000000" app:isSilent="false" app:packageNameToKill="com.android.contacts"  />
+				
+			<com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Hide Icon / Text " android:key="dialer_hide_color" android:summary="Choose letter color" android:dependency="dialer_theme_override" android:defaultValue="-5329234" hexValue="true" alphaSlider="true" app:isSilent="false" app:packageNameToKill="com.android.contacts" />
+    	
+        </PreferenceScreen>
+	
+
+
+
+
+
+	
+</PreferenceScreen>
